@@ -1,0 +1,77 @@
+#버전 확인
+git -v
+git -version
+
+#숨겨진 파일 확인
+ls -al
+#.git 폴더 삭제 
+rm -rf .git
+
+1. git으로 관리할 경로까지 이동
+
+2. 초기화(.git 폴더 생성 - 숨겨져 있음)
+    git init
+
+3. 브랜치 이름 기본값 변경하기(master일때)
+    git config --global init.defaultBranch main
+
+4. git 상태 확인
+    git status
+
+5. git으로 관리하는 파일로 추가
+    git add .
+
+6. commit(해당 시점을 저장)
+    git commit -m "저장 메시지"
+
+7. commit 이전에 계정 정보 등록 (--global 옵션은 해당 컴퓨터 전체에 적용)
+    git config --global user.name "Your Name"
+    git config --global user.email "you@naver.com"
+
+8. commit 정보 확인
+    git log
+
+9. 과제
+project_5/test1 를 생성
+git으로 관리
+파일 생성은 알아서 최소 커밋의 수는 5번이상 되도록
+
+------------------
+로컬 컴퓨터(코드있음)와 github 사이트(비어있음) 연결
+1. Remote 정보 확인
+    git remote
+    git remote -v
+
+2. remote 추가
+    git remote add 리모트이름 github리파지토리 주소
+    git remote add origin  https://github.com/Jaepyeong/work1.git
+
+3. remote 삭제
+    git remote rm 리모트이름
+    git remote rm origin
+
+4. github 데이터 넣기 
+    git push -u origin main
+    git push
+-------------------------
+clone 
+- 코드가 없는 상태에서 전체 코드를 다운로드 받을 경우
+git clone url 디렉토리
+-------------------------
+pull
+- 코드가 있는 상태에서 변경된 부분만 받을 경우
+git pull
+변경사항있다면?
+-------------------------
+브랜치 삭제 
+git branch -d 브랜치명
+-------------------------
+브랜치 복구
+git branch 브랜치명 커밋 번호
+
+git log --graph --oneline
+-------------------------
+-------------------------
+-------------------------
+
+-------------------------
